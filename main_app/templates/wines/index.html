@@ -5,7 +5,7 @@
 <link 
   rel="stylesheet"
   type="text/css"
-  href="{% static 'css/cats/cat-index.css' %}"
+  href="{% static 'css/wines/wine-index.css' %}"
 />
 {% endblock %}
 
@@ -26,17 +26,14 @@
       <div class="card-content">
         <div class="card-img-container">
           <img 
-            src="{% static 'images/sk8r-boi-wine.svg' %}" 
-            alt="A skater boy wine"
+            src="{% static 'images/sk8r-boi-cat.svg' %}" 
+            alt="A skater boy cat"
           >
         </div>
         <h2 class="card-title">{{ wine.name }}</h2>
-        {% if wine.age > 0 %}
-          <p>A {{ wine.age }} year old {{ wine.breed }}</p>
-        {% else %}
-          <p>A {{ wine.breed }} kitten.</p>
-        {% endif %}
-        <p><small>{{ wine.description }}</small></p>
+        <p>{{ wine.brand }}</p>
+        <p>{{ wine.taste }}</p>
+        <p>{{ wine.year }}</p>
       </div>
     </div>
   {% endfor %}
