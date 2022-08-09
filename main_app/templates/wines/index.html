@@ -22,7 +22,7 @@
 <section class="card-container">
   {% for wine in wines %}
     <div class="card">
-      <a href="/wines/{{ wine.id }}">
+      <a href="{% url 'wines_detail' wine.id %}">
       <div class="card-content">
         <div class="card-img-container">
           <img 

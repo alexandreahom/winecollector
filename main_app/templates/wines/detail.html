@@ -20,12 +20,13 @@
   </div>
   <div class="cat-details">
     <h1>{{ wine.name }}</h1>
-    {% if wine.age > 0 %}
-      <h2>A {{ wine.age }} year old {{ wine.breed }}</h2>
-    {% else %}
-      <h2>A {{ wine.breed }} kitten.</h2>
-    {% endif %}
-    <p>{{ wine.description }}</p>
+    <h1>{{ wine.brand }}</h1>
+    <h1>{{ wine.taste }}</h1>
+    <h1>{{ wine.year }}</h1>
+    <div class="cat-actions">
+      <a href="{% url 'wines_update' wine.id %}" class="btn warn">Edit</a>
+      <a href="{% url 'wines_delete' wine.id %}" class="btn danger">Delete</a>
+    </div>
   </div>
 </section>
 
