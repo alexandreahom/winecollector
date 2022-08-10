@@ -11,26 +11,26 @@
     type="image/png"
     href=""
   >
-  <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/wines/base.css' %}">
   <title>Wine Collector</title>
   {% block head %}
   {% endblock %}
 </head>
 <body>
   <header>
-    <div class="header-logo-container">
-      <a href="/">
-        <img 
-          src="{% static '' %}"
-          alt=""
-        >
-      </a>
-    </div>
     <nav>
       <ul>
+        {% if user.is_authenticated %}
+        <li><a href="/">Home</a></li>
         <li><a href="/wines">All Wines</a></li>
         <li><a href="{% url 'wines_create' %}">Add a Wine</a></li>
         <li><a href="/about">About</a></li>
+        <li><a href="{% url 'logout' %}">Log out</a></li>
+        {% else %}
+        <li><a href="/">Home</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'home' %}">Login</a></li>
+        {% endif %}
       </ul>
     </nav>
   </header>

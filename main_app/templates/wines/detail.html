@@ -4,7 +4,7 @@
 {% block head %}
 <link 
   rel="stylesheet"
-  href={% static 'css/wines/wine-detail.css' %}
+  href={% static 'css/wine-detail.css' %}
 />
 {% endblock %}
 
@@ -13,14 +13,13 @@
 <section class="cat-container">
   <div class="cat-img">
     <img 
-      src="{% static 'images/wine-glass.png' %}" 
-      alt="wine-glass.png"
+      src="{% static 'images/wine-cooler.png' %}" 
+      alt="wine-cooler.png"
       class="img-container"
     >
   </div>
   <div class="cat-details">
     <h1>{{ wine.name }}</h1>
-    <h2>{{ wine.brand }}</h2>
     <h2>{{ wine.taste }}</h2>
     <h2>{{ wine.year }}</h2>
     <div class="cat-actions">
