@@ -4,8 +4,7 @@
 {% block head %}
 <link 
   rel="stylesheet"
-  type="text/css"
-  href="{% static 'css/wines/wine-index.css' %}"
+  href={% static 'css/wine-index.css' %}
 />
 {% endblock %}
 
@@ -13,10 +12,10 @@
 
 <section class="page-header">
   <h1>Wine List</h1>
-  <img src="{% static 'images/cool-cat.svg' %}" alt="A cool cat" />
-  <img src="{% static 'images/happy-cat.svg' %}" alt="A happy cat" />
-  <img src="{% static 'images/teacup-cat.svg' %}" alt="A cat in a teacup" />
-  <img src="{% static 'images/cat-in-box.svg' %}" alt="A cat in a box" />
+  <img src="{% static 'images/wine.png' %}" alt="wine.png" />
+  <img src="{% static 'images/red-wine.png' %}" alt="red-wine.png" />
+  <img src="{% static 'images/glass-and-bottle-of-wine.png' %}" alt="glass-and-bottle-of-wine.png" />
+  <img src="{% static 'images/date.png' %}" alt="date.png" />
 </section>
 
 <section class="card-container">
@@ -26,8 +25,9 @@
       <div class="card-content">
         <div class="card-img-container">
           <img 
-            src="{% static 'images/sk8r-boi-cat.svg' %}" 
-            alt="A skater boy cat"
+            src="{% static 'images/wine-glass.png' %}" 
+            alt="wine-glass.png"
+            class="img-container"
           >
         </div>
         <h2 class="card-title">{{ wine.name }}</h2>

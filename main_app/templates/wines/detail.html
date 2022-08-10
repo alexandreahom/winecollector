@@ -3,9 +3,8 @@
 
 {% block head %}
 <link 
-  rel="stylesheet" 
-  type="text/css" 
-  href="{% static 'css/cats/cat-detail.css' %}"
+  rel="stylesheet"
+  href={% static 'css/wines/wine-detail.css' %}
 />
 {% endblock %}
 
@@ -14,15 +13,16 @@
 <section class="cat-container">
   <div class="cat-img">
     <img 
-      src="{% static 'images/sk8r-boi-cat.svg' %}" 
-      alt="A skater boy cat"
+      src="{% static 'images/wine-glass.png' %}" 
+      alt="wine-glass.png"
+      class="img-container"
     >
   </div>
   <div class="cat-details">
     <h1>{{ wine.name }}</h1>
-    <h1>{{ wine.brand }}</h1>
-    <h1>{{ wine.taste }}</h1>
-    <h1>{{ wine.year }}</h1>
+    <h2>{{ wine.brand }}</h2>
+    <h2>{{ wine.taste }}</h2>
+    <h2>{{ wine.year }}</h2>
     <div class="cat-actions">
       <a href="{% url 'wines_update' wine.id %}" class="btn warn">Edit</a>
       <a href="{% url 'wines_delete' wine.id %}" class="btn danger">Delete</a>

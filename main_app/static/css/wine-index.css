@@ -5,6 +5,11 @@
   flex-wrap: wrap;
 }
 
+.img-container {
+  width: 100px;
+  height: 90px;
+}
+
 .card {
   width: 275px;
   margin: 10px;
