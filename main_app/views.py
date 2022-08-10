@@ -1,9 +1,9 @@
 from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import LoginView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login
 from .models import Wine
 
@@ -16,7 +16,7 @@ def about(request):
 
 @login_required
 def wines_index(request):
-  wines = Wine.objects.all()
+  wines = Wine.objects.filter(user=request.user)
   return render(request, 'wines/index.html', { 'wines': wines })
 
 @login_required
