@@ -11,10 +11,10 @@
   <div class="cat-container">
     <img src="{% static 'images/homepage-wine.png' %}" alt="homepage-wine.png" />
   </div>
-  <img 
+  {% comment %} <img 
     src="{% static '' %}" 
     alt=""
-  />
+  /> {% endcomment %}
 </section>
 {% if not user.is_authenticated %}
 <section>
